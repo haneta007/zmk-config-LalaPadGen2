@@ -50,7 +50,7 @@
 
         CONBO_ESC {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1 37 38 39 40 47>;
+            key-positions = <0 1>;
         };
 
         COMBO_TAB {
@@ -60,7 +60,12 @@
 
         up {
             bindings = <&kp RIGHT_ARROW>;
-            key-positions = <39 41 0>;
+            key-positions = <39 41>;
+        };
+
+        DE {
+            bindings = <&kp DEL>;
+            key-positions = <8 9>;
         };
     };
 
@@ -70,39 +75,39 @@
         DEFAULT_LAYER {
             display-name = "Default";
             bindings = <
-&kp Q              &kp W      &kp E         &kp R        &kp T                                &kp Y      &kp U         &kp I           &kp O           &kp P
-&kp A              &kp S      &kp D         &kp F        &kp G                                &kp H      &kp J         &kp K           &kp L           &kp LS(SEMI)
-&mt2 LEFT_SHIFT Z  &kp X      &kp C         &kp V        &kp B                                &kp N      &kp M         &kp COMMA       &kp PERIOD      &kp SLASH
-&kp LCTRL          &kp LWIN   &kp LEFT_ALT  &lt 1 LANG2  &kp SPACE  &kp LANG1  &kp BACKSPACE  &kp ENTER  &lt 2 ESCAPE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                   &none      &kp RIGHT     &kp DOWN     &kp LEFT   &kp UP     &kp UP         &kp LEFT   &kp DOWN      &kp RIGHT       &none
-&mkp LCLK          &mkp RCLK  &mkp MCLK                                                                                &mkp LCLK       &mkp RCLK       &mkp MCLK
-&mkp MB5           &mkp MB4   &kp LG(TAB)   &kp LG(D)    &kp LCTRL                            &mkp MB5   &mkp MB4      &kp LG(TAB)     &kp LG(D)       &kp LCTRL
+&kp Q              &kp W      &kp E         &kp R        &kp T                                       &kp Y      &kp U         &kp I           &kp O           &kp P
+&kp A              &kp S      &kp D         &kp F        &kp G                                       &kp H      &kp J         &kp K           &kp L           &kp LS(SEMI)
+&mt2 LEFT_SHIFT Z  &kp X      &kp C         &kp V        &kp B                                       &kp N      &kp M         &kp COMMA       &kp PERIOD      &kp SLASH
+&kp LCTRL          &kp LWIN   &kp LEFT_ALT  &lt 1 LANG2  &kp SPACE  &lt 2 LANGUAGE_1  &kp BACKSPACE  &kp ENTER  &lt 2 ESCAPE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                   &none      &kp RIGHT     &kp DOWN     &kp LEFT   &kp UP            &kp UP         &kp LEFT   &kp DOWN      &kp RIGHT       &none
+&mkp LCLK          &mkp RCLK  &mkp MCLK                                                                                       &mkp LCLK       &mkp RCLK       &mkp MCLK
+&mkp MB5           &mkp MB4   &kp LG(TAB)   &kp LG(D)    &kp LCTRL                                   &mkp MB5   &mkp MB4      &kp LG(TAB)     &kp LG(D)       &kp LCTRL
             >;
         };
 
         SECONDARY_LAYER {
             display-name = "secondary_layer";
             bindings = <
-&kp F1            &kp F2             &kp F3       &kp F4  &kp F5                          &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
-&kp F6            &kp F7             &kp F8       &kp F9  &kp F10                         &kp NUMBER_4      &kp NUMBER_5       &kp NUMBER_6  &kp PLUS      &kp MINUS
-&kp F11           &kp F12            &kp PERCENT  &kp F9  &kp F2                          &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3  &kp SLASH     &kp SLASH
-&trans            &trans             &trans       &trans  &trans   &trans  &kp BACKSPACE  &kp RET           &kp LS(SEMI)       &kp PERIOD    &kp CARET     &kp BACKSLASH
-                  &trans             &trans       &trans  &trans   &trans  &trans         &trans            &trans             &trans        &trans
-&trans            &trans             &trans                                                                                    &trans        &trans        &trans
-&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans       &trans  &trans                          &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans        &trans        &trans
+&kp F1            &kp F2             &kp F3  &kp F4  &kp F5                          &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
+&kp F6            &kp F7             &kp F8  &kp F9  &kp F10                         &kp NUMBER_4      &kp NUMBER_5       &kp NUMBER_6  &kp PLUS      &kp MINUS
+&kp F11           &kp F12            &trans  &kp F9  &kp F2                          &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3  &kp SLASH     &kp SLASH
+&trans            &trans             &trans  &trans  &trans   &trans  &kp BACKSPACE  &kp RET           &kp LS(SEMI)       &kp PERIOD    &kp CARET     &kp BACKSLASH
+                  &trans             &trans  &trans  &trans   &trans  &trans         &trans            &trans             &trans        &trans
+&trans            &trans             &trans                                                                               &trans        &trans        &trans
+&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans  &trans  &trans                          &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans        &trans        &trans
             >;
         };
 
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR        &kp UNDERSCORE                  &kp MINUS     &kp HOME  &kp UP_ARROW    &kp END    &kp PRINTSCREEN
-&kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp MINUS         &kp AT                          &kp EXCL      &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp SCROLLLOCK
-&kp GRAVE        &kp SQT        &kp SEMI      &kp LEFT_BRACKET  &kp MINUS                       &kp QUESTION  &mkp MB4  &trans          &mkp MB5   &kp PAUSE_BREAK
-&trans           &trans         &trans        &trans            &trans          &trans  &trans  &trans        &trans    &trans          &trans     &trans
-                 &trans         &trans        &trans            &trans          &trans  &trans  &trans        &trans    &trans          &trans
-&trans           &trans         &trans                                                                                  &trans          &trans     &trans
-&trans           &trans         &trans        &trans            &trans                          &trans        &trans    &trans          &trans     &trans
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR        &kp UNDERSCORE                  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &kp PRINTSCREEN
+&kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp MINUS         &kp AT                          &kp EXCL      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mkp MB4        &mkp MB5
+&kp GRAVE        &kp SQT        &kp SEMI      &kp LEFT_BRACKET  &kp MINUS                       &kp QUESTION  &kp LESS_THAN         &kp GREATER_THAN       &kp UP_ARROW    &trans
+&trans           &trans         &trans        &trans            &trans          &trans  &trans  &trans        &trans                &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT
+                 &trans         &trans        &trans            &trans          &trans  &trans  &trans        &trans                &trans                 &trans
+&trans           &trans         &trans                                                                                              &trans                 &trans          &trans
+&trans           &trans         &trans        &trans            &trans                          &trans        &trans                &trans                 &trans          &trans
             >;
         };
 
